@@ -3,7 +3,7 @@ import BlogList from './BlogList';
 
 const Home = () => {
     const [blogs, setBlogs] = useState(null);
-    const [name, setName] = useState('rocky');
+    
     const handleDelete = (id) => {
         const newBlogs = blogs.filter(blog => blog.id !== id)
         setBlogs(newBlogs);
@@ -20,8 +20,6 @@ const Home = () => {
     return (
         <div className="home">
             {blogs && <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete}/>}
-            {/* <button onClick={()=> setName('rasif')}>change name</button>
-            /* <p>{name}</p> */}
         </div>
     );
 }
