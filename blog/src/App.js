@@ -1,19 +1,31 @@
-import Navbar from './Navbar';
-import Home from './Home';
+import {
+  createBrowserRouter, 
+  createRoutesFromElements,
+  Route, 
+  RouterProvider
+} from 'react-router-dom'
+
+// pages
+import Home from './pages/Home'
+import Create from './pages/Create'
+import BlogDetails from './pages/BlogDetails'
+
+// layouts
+import RootLayout from './layout/rootLayout'
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<RootLayout />}>
+      <Route index element={<Home />} />
+      <Route path="create" element={<Create />} />
+      <Route path="blogs/:id" element={<BlogDetails />} />
+    </Route>
+  )
+)
 
 function App() {
-  // const title = 'Welcome to My Blog';
-  // const likes = 50;
-
   return (
-    <div className="App">
-      <Navbar />
-      <div className="Content">
-      <Home />
-      {/* <h1>{title}</h1>
-      <p>Liked {likes} times</p> */}
-      </div>
-    </div>
+    <RouterProvider router={router} />
   );
 }
 
