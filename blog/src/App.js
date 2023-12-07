@@ -8,6 +8,7 @@ import {
 // pages
 import Home from './pages/Home'
 import Create from './pages/Create'
+import BlogDetails from './pages/BlogDetails'
 
 // layouts
 import RootLayout from './layout/rootLayout'
@@ -17,6 +18,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
       <Route path="create" element={<Create />} />
+      <Route path="blogs/:id" element={<BlogDetails />} />
     </Route>
   )
 )
