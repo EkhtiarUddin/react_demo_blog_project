@@ -99,7 +99,7 @@ main {
   border: 1px solid #ddd;
   box-sizing: border-box;
   display: block;
-  color: #000; /* Set text color for input, textarea, and select */
+  color: #000; 
 }
 
 .create button {
