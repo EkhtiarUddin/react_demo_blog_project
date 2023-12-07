@@ -71,16 +71,38 @@ main {
   text-decoration: none;
 }
 
-/* blog details page */
-.blog-details h2 {
+/* create new blog form */
+.create {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff; /* Set default text color for the form */
+}
+
+.create label {
+  text-align: left;
+  display: block;
+}
+
+.create h2 {
   font-size: 20px;
   color: #f1356d;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
-.blog-details div {
-  margin: 20px 0;
+
+.create input,
+.create textarea,
+.create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+  color: #000; /* Set text color for input, textarea, and select */
 }
-.blog-details button {
+
+.create button {
   background: #f1356d;
   color: #fff;
   border: 0;
@@ -88,16 +110,3 @@ main {
   border-radius: 8px;
   cursor: pointer;
 }
-/* help layout */
-
-
-/* faq */
-
-
-/* careers list */
-
-
-/* careers details */
-
-
-/* breadcrumbs */
